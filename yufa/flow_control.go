@@ -5,7 +5,7 @@ import (
 )
 
 func init() {
-	flowControl()
+	// flowControl()
 }
 
 func flowControl() {
@@ -13,13 +13,39 @@ func flowControl() {
 
 	/*
 		if条件判断格式：
-		if 条件表达式 {
-			执行语句
-		} else if 条件表达式 {
-			执行语句
-		} else {
-			执行语句
-		}
+			if 条件表达式 {
+				执行语句
+			} else if 条件表达式 {
+				执行语句
+			} else {
+				执行语句
+			}
+
+		for循环格式：
+			for 初始化语句; 条件表达式; 后置语句 {
+				执行语句
+			}
+
+		switch条件判断格式：
+			switch 表达式 {
+			case 值1:
+				执行语句
+			case 值2:
+				执行语句
+			default:
+				执行语句
+			}
+
+		break/continue：
+			break用于终止当前循环
+			continue跳出当前循环继续下次循环
+
+		goto格式：
+			goto 标签名
+			****
+			标签名:
+
+
 	*/
 	fmt.Println("\n----------------------------  if条件判断 demo ----------------------------")
 	flage := true

@@ -9,17 +9,21 @@ import (
 )
 
 func init() {
-	// fmt打印
-	printfDemo()
+	/*
 
-	// 申明变量
-	defDemo()
+		// fmt打印
+		printfDemo()
 
-	// 常量计数器
-	iotaDemo()
+		// 申明变量
+		defDemo()
 
-	// 数据类型
-	dataType()
+		// 常量计数器
+		iotaDemo()
+
+		// 数据类型
+		dataType()
+
+	*/
 }
 
 func dataType() {
