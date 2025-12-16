@@ -2,6 +2,7 @@ package yufa
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 	"unsafe"
 	// "github.com/shopspring/decimal"
@@ -181,6 +182,35 @@ func dataType() {
 	runeStr[0] = '我'
 	runeStr[1] = '爱'
 	fmt.Println(string(runeStr))
+
+	fmt.Println("\n----------------------------------------------------  transform data type ---------------------------------------------------")
+	/*
+		其他类型转换成String类型, 两种：
+		fmt.Sprintf:转换格式 int为%d，float为%f，bool为%t byte为%c
+		strconv包:
+	*/
+	var ti int = 100
+	var tf float64 = 23.45
+	var tb bool = true
+	strTi := fmt.Sprintf("%d", ti)
+	strTf := fmt.Sprintf("%f", tf)
+	strTb := fmt.Sprintf("%t", tb)
+	fmt.Printf("strTi=%v %T, strTf=%v %T, strTb=%v %T \n", strTi, strTi, strTf, strTf, strTb, strTb)
+	strTi1 := strconv.FormatInt(int64(ti), 10)
+	strTf1 := strconv.FormatFloat(tf, 'f', 2, 64)
+	strTb1 := strconv.FormatBool(tb)
+	fmt.Printf("strTi1=%v %T, strTf1=%v %T, strTb1=%v %T \n", strTi1, strTi1, strTf1, strTf1, strTb1, strTb1)
+
+	/*
+		String类型转换成其他类型，strconv包
+	*/
+	sn1 := "12"
+	sn2 := "12.34"
+	sn3 := "true"
+	intn, _ := strconv.Atoi(sn1)
+	floatn, _ := strconv.ParseFloat(sn2, 64)
+	booln, _ := strconv.ParseBool(sn3)
+	fmt.Printf("intn=%v %T, floatn=%v %T, booln=%v %T \n", intn, intn, floatn, floatn, booln, booln)
 }
 
 const aa = iota
