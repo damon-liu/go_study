@@ -1,9 +1,12 @@
 package yufa
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func init() {
-	function()
+	// function()
 }
 
 func function() {
@@ -29,7 +32,16 @@ func function() {
 
 	// 返回多个值
 	sum, sub := fub2(12, 3)
-	fmt.Printf("sum = %v , sub = %v", sum, sub)
+	fmt.Printf("sum = %v , sub = %v \n", sum, sub)
+
+	m := map[int]string{
+		1: "hello",
+		4: "go!",
+		3: "damon",
+		2: "world",
+	}
+	mapKeySort(m)
+
 }
 
 // 固定参数
@@ -72,4 +84,19 @@ func fub2(x, y int) (sum int, sub int) {
 	sum = x + y
 	sub = x - y
 	return sum, sub
+}
+
+func mapKeySort(m map[int]string) map[int]string {
+	var s1 []int
+	for k := range m {
+		s1 = append(s1, k)
+	}
+	sort.Ints(s1)
+	m1 := make(map[int]string)
+	for _, v := range s1 {
+		temp := m[v]
+		m1[v] = temp
+		fmt.Printf("key = %v, v = %v \n", v, temp)
+	}
+	return m1
 }
