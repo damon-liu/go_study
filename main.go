@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	// _ "go_study/duotai"
-	// _ "go_study/jicheng"
+	_ "go_study/jiegouti"
+	_ "go_study/jiekou"
 	_ "go_study/yufa"
 )
 

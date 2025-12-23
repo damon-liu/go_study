@@ -1,4 +1,4 @@
-package jicheng
+package jiegouti
 
 import "fmt"
 
@@ -7,25 +7,30 @@ type Cat struct {
 	Sex  string
 }
 
-func init() {
-	fmt.Println("---------继承Demo ---------")
-	a := Cat{
-		Name: "Cat",
-		Sex:  "xxx",
-	}
-	a.Walk()
-	a.Eat()
+type Tom struct {
+	Cat Cat
+	Say bool
+}
 
-	c := Tom{
-		Cat: Cat{
-			Name: "Tom",
-			Sex:  "Male",
-		},
-		Say: "Yes",
-	}
-	c.Walk()
-	c.Eat()
-	fmt.Println()
+func init() {
+	// fmt.Println("---------继承Demo ---------")
+	// a := Cat{
+	// 	Name: "Cat",
+	// 	Sex:  "xxx",
+	// }
+	// a.Walk()
+	// a.Eat()
+
+	// tom := Tom{
+	// 	Cat: Cat{
+	// 		Name: "Tom",
+	// 		Sex:  "Male",
+	// 	},
+	// 	Say: true,
+	// }
+	// tom.Walk()
+	// tom.Eat()
+	// fmt.Println()
 }
 
 func (this *Cat) Walk() {
@@ -34,11 +39,6 @@ func (this *Cat) Walk() {
 
 func (this *Cat) Eat() {
 	fmt.Println("Animal " + this.Name + " Eat()...")
-}
-
-type Tom struct {
-	Cat Cat
-	Say string
 }
 
 func (this *Tom) Eat() {

@@ -1,20 +1,20 @@
-package duotai
+package jiekou
 
 import (
 	"fmt"
 )
 
 func init() {
-	fmt.Println("--------- 多态Demo ---------")
-	d := Dog{
-		Name:  "Bingo",
-		Color: "Wight",
-		Type:  "Chaiqian",
-	}
-	d.Sleep()
-	fmt.Println(d.Name + " color is: " + d.GetColor())
-	fmt.Println(d.Name + " type is: " + d.GetType())
-	fmt.Println()
+	// fmt.Println("--------- 多态Demo ---------")
+	// d := Dog{
+	// 	Name:  "Bingo",
+	// 	Color: "Wight",
+	// 	Type:  "Chaiqian",
+	// }
+	// d.Sleep()
+	// fmt.Println(d.Name + " color is: " + d.GetColor())
+	// fmt.Println(d.Name + " type is: " + d.GetType())
+	// fmt.Println()
 }
 
 type AnimalIn interface {

@@ -23,6 +23,30 @@ func init() {
 
 }
 
+func makeAndNewDemo() {
+	/*
+		make也是用于内存分配，它只用于slic、map、以及channel的内存创建，而且它返回的类型就是这三个类型本身
+		func make(t Type, size ...IntgerType) Type
+
+		make和new的区别：
+		1、二者都是用来做内存分配的。
+		2、make只适用于slice、map以及channel的初始化，返回的还是个三个引用类型本身
+		3、而new用于类型的内存分配，并且内存对应的值未类型零值，返回的是指向类型的指针。
+	*/
+
+	// map初始化
+	m1 := make(map[string]string, 2)
+	m1["k1"] = "v1"
+
+	// 数组初始化
+	a1 := make([]int, 4, 4)
+	a1[0] = 1
+
+	// 指针初始化
+	var b *int = new(int)
+	*b = 100
+}
+
 func valueAndReferenceType() {
 	fmt.Println("\n------------------  值类型与引用类型 demo ------------------")
 	/*
